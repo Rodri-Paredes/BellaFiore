@@ -11,7 +11,7 @@ namespace BellaFioreDAO.Implementation
     public class BaseImpl
     {
         string connectionString = "Server=LAPTOP-8DVHUM6G;Database=bd_bellafiore;Trusted_Connection=True;";
-        internal string query;
+        public string query;
         public SqlCommand CreateBasicCommand()
         {
             SqlConnection connection = new SqlConnection(connectionString);

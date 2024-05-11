@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BellaFioreDAO", "BellaFioreDAO\BellaFioreDAO.csproj", "{67F1CE9B-2535-489E-A305-66C43F96BB90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BellaFioreWPF", "BellaFioreWPF\BellaFioreWPF.csproj", "{6031B5D1-B8EE-480B-B66B-28848A785362}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{67F1CE9B-2535-489E-A305-66C43F96BB90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67F1CE9B-2535-489E-A305-66C43F96BB90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67F1CE9B-2535-489E-A305-66C43F96BB90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6031B5D1-B8EE-480B-B66B-28848A785362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6031B5D1-B8EE-480B-B66B-28848A785362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6031B5D1-B8EE-480B-B66B-28848A785362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6031B5D1-B8EE-480B-B66B-28848A785362}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

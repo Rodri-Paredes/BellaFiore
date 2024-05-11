@@ -8,9 +8,5 @@ namespace BellaFioreDAO
 {
     public class Class1
     {
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Hola, mundo!");
-        }
     }
 }

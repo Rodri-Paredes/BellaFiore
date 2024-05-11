@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BellaFioreDAO.Model
 {
-    public class customer : baseModel
+    public class Customer : BaseModel
     {
         public short id_customer { get; set; }
         public string ci { get; set; }
@@ -16,7 +16,7 @@ namespace BellaFioreDAO.Model
         public string email { get; set; }
         public string phone { get; set; }
 
-        public customer(string Ci, string Name, string Surname, string Second_surname, string Email, string Phone)
+        public Customer(string Ci, string Name, string Surname, string Second_surname, string Email, string Phone)
         {
             ci = Ci;
             name = Name;

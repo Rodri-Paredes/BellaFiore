@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BellaFioreDAO.Model
 {
-    public class baseModel
+    public class BaseModel
     {
         public short created_by { get; set; }
         public short updated_by { get; set; }
@@ -14,12 +14,12 @@ namespace BellaFioreDAO.Model
         public byte is_active { get; set; } 
         public DateTime creation_date { get; set; }
 
-        public baseModel()
+        public BaseModel()
         {
 
         }
 
-        public baseModel(short created_by, short updated_by, DateTime last_update, byte is_active, DateTime creation_date)
+        public BaseModel(short created_by, short updated_by, DateTime last_update, byte is_active, DateTime creation_date)
         {
             this.created_by = created_by;
             this.updated_by = updated_by;

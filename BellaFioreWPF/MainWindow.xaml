@@ -30,6 +30,8 @@
         <TextBox x:Name="Tbphone" HorizontalAlignment="Left" Margin="322,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
         <Label x:Name="Lbphone" Content="Teléfono" HorizontalAlignment="Left" Margin="254,126,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Btnload" Content="Cargar" HorizontalAlignment="Left" Margin="460,185,0,0" VerticalAlignment="Top" Click="Btnload_Click"/>
-        <DataGrid x:Name="Dgcustomerdata" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,238,133,0" Height="287" VerticalAlignment="Top" IsReadOnly="True" CanUserAddRows="False"/>
+        <DataGrid x:Name="Dgcustomerdata" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,238,133,0" Height="287" VerticalAlignment="Top" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="Dgcustomerdata_SelectionChanged"/>
+        <Button x:Name="Btnupdate" Content="Actualizar" HorizontalAlignment="Left" Margin="556,185,0,0" VerticalAlignment="Top" Click="Btnupdate_Click"/>
+        <Button x:Name="Btndelete" Content="Eliminar" HorizontalAlignment="Left" Margin="683,180,0,0" VerticalAlignment="Top" Click="Btndelete_Click"/>
     </Grid>
 </Window>

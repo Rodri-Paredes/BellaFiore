@@ -55,8 +55,9 @@ namespace BellaFioreDAO.Implementation
 
         public DataTable Select()
         {
-            query = @"SELECT id_customer,ci AS 'CI' ,CONCAT(name,' ',surname,' ',second_sur_name) AS 'Nombre Completo', email AS 'Correo', phone AS 'Celular'
+            query = @"SELECT id_customer,ci AS 'CI' ,name AS 'Nombre', surname AS 'Apellido',  email AS 'Correo', phone AS 'Celular'
                       FROM customer
+                      WHERE is_active=1
                       ORDER BY 3";
             SqlCommand command = CreateBasicCommand(query);
 
@@ -73,8 +74,8 @@ namespace BellaFioreDAO.Implementation
 
         public int Update(Customer t)
         {
-            query = @"UPDATE customer SET ci= @ci, name= @name, surname= @surname, second_sur_name= @second_surname, email= @email, phone=@phone, last_update= CURRENT_TIMESTAMP
-                      WHERE id_customer=@id_customer";
+            query = @"UPDATE customer SET ci = @ci, name = @name, surname = @surname, second_sur_name = @second_surname, email = @email, phone = @phone, last_update = CURRENT_TIMESTAMP
+              WHERE id_customer = @id_customer";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@ci", t.ci);
             command.Parameters.AddWithValue("@name", t.name);
@@ -83,14 +84,16 @@ namespace BellaFioreDAO.Implementation
             command.Parameters.AddWithValue("@email", t.email);
             command.Parameters.AddWithValue("@phone", t.phone);
             command.Parameters.AddWithValue("@id_customer", t.id_customer);
+            Console.WriteLine(t.id_customer);
 
             try
             {
                 return ExecuteBasicCommand(command);
-
+                
             }
             catch (Exception ex)
-            {
+            {   
+                Console.WriteLine(ex.Message);
                 throw ex;
             }
         }

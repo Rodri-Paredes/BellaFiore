@@ -16,8 +16,9 @@ namespace BellaFioreDAO.Model
         public string email { get; set; }
         public string phone { get; set; }
 
-        public Customer(string Ci, string Name, string Surname, string Second_surname, string Email, string Phone)
+        public Customer(short Id, string Ci, string Name, string Surname, string Second_surname, string Email, string Phone)
         {
+            id_customer = Id;
             ci = Ci;
             name = Name;
             surname = Surname;

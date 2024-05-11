@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BellaFioreDAO", "BellaFioreDAO\BellaFioreDAO.csproj", "{67F1CE9B-2535-489E-A305-66C43F96BB90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bellaFioreDAO", "BellaFioreDAO\bellaFioreDAO.csproj", "{67F1CE9B-2535-489E-A305-66C43F96BB90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

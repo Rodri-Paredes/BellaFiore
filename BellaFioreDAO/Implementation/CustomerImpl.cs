@@ -32,13 +32,13 @@ namespace BellaFioreDAO.Implementation
 
         public int Insert(Customer t)
         {
-            query = @"INSERT INTO customer (ci,name, surname, second_sur_name, email, phone)
-                      VALUES(@ci,@name, @surname, @second_sur_name, @email, @phone)";
+            query = @"INSERT INTO customer (ci,name, surname, second_sur_name, email, phone, created_by)
+                      VALUES(@ci,@name, @surname, @second_sur_name, @email, @phone,1)";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@ci", t.ci);
             command.Parameters.AddWithValue("@name", t.name);
             command.Parameters.AddWithValue("@surname", t.surname);
-            command.Parameters.AddWithValue("@second_surname", t.second_surname);
+            command.Parameters.AddWithValue("@second_sur_name", t.second_surname);
             command.Parameters.AddWithValue("@email", t.email);
             command.Parameters.AddWithValue("@phone", t.phone);
 

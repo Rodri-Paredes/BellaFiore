@@ -1,8 +1,10 @@
 ﻿using BellaFioreDAO.Implementation;
+using BellaFioreDAO.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,14 +31,17 @@ namespace BellaFioreWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Console.WriteLine("Nombre: " + Tbname.Text);
+            Console.WriteLine("Apellido: " + Tbsurname.Text);
+            Console.WriteLine("Correo electrónico: " + Tbemail.Text);
+            Console.WriteLine("Teléfono: " + Tbphone.Text);
+
             try
             {
                 CustomerImpl customerImpl = new CustomerImpl();
-                DataTable result = customerImpl.Select();
-                foreach (DataRow row in result.Rows)
-                {
-                    Console.WriteLine(row["Celular"]);
-                }
+                Customer customer = new Customer("", Tbname.Text, Tbsurname.Text, "", Tbemail.Text, Tbphone.Text);
+                customerImpl.Insert(customer);
+                
             }
             catch (Exception ex)
             {

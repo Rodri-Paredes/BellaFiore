@@ -5,17 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BellaFioreWPF"
         mc:Ignorable="d"
-         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-     TextElement.FontWeight="Regular"
-     TextElement.FontSize="13"
-     TextOptions.TextFormattingMode="Ideal"
-     TextOptions.TextRenderingMode="Auto"
-     Background="{DynamicResource MaterialDesignPaper}"
-     FontFamily="{DynamicResource MaterialDesignFont}"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="345,185,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Guardar" HorizontalAlignment="Left" Margin="345,185,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBox x:Name="Tbname" HorizontalAlignment="Left" Margin="322,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="Lbname" Content="Nombre" HorizontalAlignment="Left" Margin="254,66,0,0" VerticalAlignment="Top"/>
 
+        <TextBox x:Name="Tbsurname" HorizontalAlignment="Left" Margin="322,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="Lbsurname" Content="Apellido" HorizontalAlignment="Left" Margin="254,96,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="Tbemail" HorizontalAlignment="Left" Margin="322,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="Lbemail" Content="Correo electrónico" HorizontalAlignment="Left" Margin="214,156,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="Tbphone" HorizontalAlignment="Left" Margin="322,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="Lbphone" Content="Teléfono" HorizontalAlignment="Left" Margin="254,126,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

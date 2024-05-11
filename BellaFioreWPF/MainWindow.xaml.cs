@@ -1,4 +1,5 @@
 ﻿using BellaFioreDAO.Implementation;
+using BellaFioreDAO.Interfaces;
 using BellaFioreDAO.Model;
 using System;
 using System.Collections.Generic;
@@ -31,23 +32,43 @@ namespace BellaFioreWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Nombre: " + Tbname.Text);
-            Console.WriteLine("Apellido: " + Tbsurname.Text);
-            Console.WriteLine("Correo electrónico: " + Tbemail.Text);
-            Console.WriteLine("Teléfono: " + Tbphone.Text);
-
             try
             {
                 CustomerImpl customerImpl = new CustomerImpl();
                 Customer customer = new Customer("", Tbname.Text, Tbsurname.Text, "", Tbemail.Text, Tbphone.Text);
                 customerImpl.Insert(customer);
-                
+                CleanForm();
+                Select();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error: " + ex.Message);
             }
 
+        }
+        void CleanForm()
+        {
+            Tbname.Clear();
+            Tbsurname.Clear();
+            Tbemail.Clear();
+            Tbphone.Clear();
+        }
+        void Select()
+        {
+            Dgcustomerdata.ItemsSource = null;
+            CustomerImpl customerImpl = new CustomerImpl();
+            DataTable result = customerImpl.Select();
+            Dgcustomerdata.ItemsSource = result.DefaultView;
+            Dgcustomerdata.Columns[0].Visibility = Visibility.Collapsed;
+        }
+
+        private void Btnload_Click(object sender, RoutedEventArgs e)
+        {
+            Select();
+        }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Select();
         }
     }
 }

@@ -57,7 +57,7 @@ namespace BellaFioreDAO.Implementation
         {
             query = @"SELECT id_customer,ci AS 'CI' ,CONCAT(name,' ',surname,' ',second_sur_name) AS 'Nombre Completo', email AS 'Correo', phone AS 'Celular'
                       FROM customer
-                      ORDER BY 2";
+                      ORDER BY 3";
             SqlCommand command = CreateBasicCommand(query);
 
             try
